@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fcc-front-end-developer-4/static/css/main.31c14d26.css",
+    "main.js": "/fcc-front-end-developer-4/static/js/main.e447406e.js",
+    "index.html": "/fcc-front-end-developer-4/index.html",
+    "main.31c14d26.css.map": "/fcc-front-end-developer-4/static/css/main.31c14d26.css.map",
+    "main.e447406e.js.map": "/fcc-front-end-developer-4/static/js/main.e447406e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31c14d26.css",
+    "static/js/main.e447406e.js"
+  ]
+}

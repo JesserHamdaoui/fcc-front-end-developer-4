@@ -5,7 +5,7 @@ import {
   updateDisplay,
 } from "../../redux/display/displayActions";
 
-const NumberButton = ({ id, value }) => {
+const NumberButton = ({ id, value, zeroStyle }) => {
   const dispatch = useDispatch();
   const display = useSelector((state) => state.display.display);
   const isResult = useSelector((state) => state.display.isResult);
@@ -22,7 +22,12 @@ const NumberButton = ({ id, value }) => {
   };
 
   return (
-    <button id={id} value={value} onClick={handleClick}>
+    <button
+      id={id}
+      value={value}
+      onClick={handleClick}
+      className={`w-10 h-10 bg-slate-400 flex justify-center items-center rounded-md font-bold text-white ${zeroStyle}`}
+    >
       {value}
     </button>
   );

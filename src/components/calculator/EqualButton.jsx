@@ -23,7 +23,11 @@ const EqualButton = () => {
   };
 
   return (
-    <button id="equals" onClick={handleClick}>
+    <button
+      id="equals"
+      onClick={handleClick}
+      className="w-10 h-auto bg-blue-900 flex justify-center items-center rounded-md font-bold text-white row-span-2"
+    >
       {" "}
       ={" "}
     </button>

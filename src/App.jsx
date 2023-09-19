@@ -5,7 +5,7 @@ import { store } from "./redux/store";
 
 const App = () => {
   return (
-    <div className="app flex justify-center">
+    <div className="app flex justify-center h-screen items-center">
       <Provider store={store}>
         <Calculator />
       </Provider>

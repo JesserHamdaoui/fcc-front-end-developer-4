@@ -1,6 +1,7 @@
 import React from "react";
 import Display from "./calculator/Display";
 import NumberButton from "./calculator/NumberButton";
+import PointButton from "./calculator/PointButton";
 
 const Calculator = () => {
   return (
@@ -16,6 +17,7 @@ const Calculator = () => {
       <NumberButton value="7" />
       <NumberButton value="8" />
       <NumberButton value="9" />
+      <PointButton />
     </div>
   );
 };

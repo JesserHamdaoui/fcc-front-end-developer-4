@@ -10,7 +10,11 @@ const ACButton = () => {
     dispatch(updateSubDisplay(""));
   };
 
-  return <div onClick={handleClick}>AC</div>;
+  return (
+    <button id="clear" onClick={handleClick}>
+      AC
+    </button>
+  );
 };
 
 export default ACButton;

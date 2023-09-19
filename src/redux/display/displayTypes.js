@@ -1,1 +1,2 @@
 export const UPDATE_DISPLAY = "UPDATE_DISPLAY";
+export const TOGGLE_IS_RESULT = "TOGGLE_IS_RESULT";

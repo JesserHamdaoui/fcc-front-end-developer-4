@@ -5,9 +5,11 @@ import { store } from "./redux/store";
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Calculator />
-    </Provider>
+    <div className="app flex justify-center">
+      <Provider store={store}>
+        <Calculator />
+      </Provider>
+    </div>
   );
 };
 

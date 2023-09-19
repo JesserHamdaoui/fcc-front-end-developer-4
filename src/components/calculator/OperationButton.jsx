@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateDisplay } from "../../redux/display/displayActions";
+import {
+  toggleIsResult,
+  updateDisplay,
+} from "../../redux/display/displayActions";
 import { updateSubDisplay } from "../../redux/sub-display/subDisplayActions";
 
 const OperationButton = ({ id, opperator }) => {
@@ -9,9 +12,31 @@ const OperationButton = ({ id, opperator }) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    // if (subDisplay[-2] in ["+", "-", "*", "/"]) return;
-    if (display === "0" && opperator === "-") dispatch(updateDisplay("-"));
-    else {
+    if (opperator === "-" && display === "0") {
+      dispatch(updateSubDisplay(subDisplay + " " + opperator + " "));
+      dispatch(updateDisplay("0"));
+    } else if (
+      (subDisplay.charAt(subDisplay.length - 2) === "*" ||
+        subDisplay.charAt(subDisplay.length - 2) === "+" ||
+        subDisplay.charAt(subDisplay.length - 2) === "-" ||
+        subDisplay.charAt(subDisplay.length - 2) === "/") &&
+      display === "0"
+    ) {
+      let i = 0;
+      while (
+        !(
+          subDisplay.charAt(subDisplay.length - i) <= "9" &&
+          subDisplay.charAt(subDisplay.length - i) >= "0"
+        )
+      ) {
+        i++;
+      }
+      dispatch(
+        updateSubDisplay(
+          subDisplay.substring(0, subDisplay.length - i + 2) + opperator + " "
+        )
+      );
+    } else {
       dispatch(updateSubDisplay(subDisplay + display + " " + opperator + " "));
       dispatch(updateDisplay("0"));
     }

@@ -11,7 +11,6 @@ const NumberButton = ({ id, value }) => {
   const isResult = useSelector((state) => state.display.isResult);
 
   const handleClick = () => {
-    console.log(isResult);
     if (display === "0") {
       dispatch(updateDisplay(value));
     } else if (isResult) {

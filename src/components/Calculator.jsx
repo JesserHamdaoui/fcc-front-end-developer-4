@@ -4,6 +4,7 @@ import NumberButton from "./calculator/NumberButton";
 import PointButton from "./calculator/PointButton";
 import OperationButton from "./calculator/OperationButton";
 import SubDisplay from "./calculator/SubDisplay";
+import ACButton from "./calculator/ACButton";
 
 const Calculator = () => {
   return (
@@ -25,6 +26,7 @@ const Calculator = () => {
       <OperationButton opperator="-" />
       <OperationButton opperator="*" />
       <OperationButton opperator="/" />
+      <ACButton />
     </div>
   );
 };

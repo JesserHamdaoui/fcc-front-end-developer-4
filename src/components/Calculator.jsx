@@ -2,11 +2,14 @@ import React from "react";
 import Display from "./calculator/Display";
 import NumberButton from "./calculator/NumberButton";
 import PointButton from "./calculator/PointButton";
+import OperationButton from "./calculator/OperationButton";
+import SubDisplay from "./calculator/SubDisplay";
 
 const Calculator = () => {
   return (
     <div>
       <Display />
+      <SubDisplay />
       <NumberButton value="0" />
       <NumberButton value="1" />
       <NumberButton value="2" />
@@ -18,6 +21,10 @@ const Calculator = () => {
       <NumberButton value="8" />
       <NumberButton value="9" />
       <PointButton />
+      <OperationButton opperator="+" />
+      <OperationButton opperator="-" />
+      <OperationButton opperator="*" />
+      <OperationButton opperator="/" />
     </div>
   );
 };
